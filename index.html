@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resopnsive</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;  
+        }
+        body,html{
+            overflow-x: hidden;
+        }
+        header
+        {
+            background-image: url("./imgs/adventure.jpeg");
+            width:100vw;
+            height:100vh;
+            background-size: cover;
+            background-position: top;
+            display:flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        a{
+            text-decoration: none;
+        }
+        .header-container
+        {
+            margin-bottom: 150px;
+            color:whitesmoke;
+            text-align: center;
+        }
+        .line
+        {
+           width:150px;
+           height: 4px;
+           background: #fc036b; 
+           margin:10px auto;
+           border-radius: 5px;
+        }
+        .header-container h1{
+            font-size: 7vmin;
+            margin-top: 50px;
+            margin-bottom:30px;
+            color:whitesmoke;
+        }
+      .ctn{
+        padding:8px 15px;
+        background: #fc036b;
+        border-radius: 30px;
+        color:whitesmoke;
+        }
+        .navbar
+        {
+            display:flex;
+            position: absolute;
+            top:0px;
+            left:0px;
+            width:100%;
+            justify-content: space-between;
+            padding:20px;
+            color:whitesmoke;
+        }
+        ul{
+            list-style:none;
+            
+        }
+        .nav-link
+        {
+              display:flex;
+              align-items: center;
+              color:whitesmoke;
+        } 
+        .nav-link li
+        {
+            margin:0px 30px;
+            color:whitesmoke;
+          
+        } 
+        .active
+        {
+              text-decoration: underline;
+              font-weight: bold;
+              color:whitesmoke;
+        } 
+        .menu-btn
+        {
+            position:absolute;
+            top:30px;
+            right:30px;
+            width:40px;
+            cursor:pointer;
+            display:none;
+        }
+        section{
+            width:80%;
+            margin:80px auto;
+        }
+        .title
+        {
+            text-align:center;
+            font-size:4vmin;
+            color:black;
+        }
+        .row
+        {
+            display:flex;
+            align-items: center;
+            width:100%;
+            justify-content: space-between;
+        }
+        .row .col
+        {
+                 display:flex;
+                 flex-direction: column;
+                 align-items:center;
+        }
+        .explore
+        {
+            width:100%;
+            height:100vh;
+            background-image:url("imgs/background.jpg") ;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display:flex;
+
+        }
+        .explore-content{
+            width:60%;
+            padding:50px;
+            color:white;
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+        }
+        .explore-content h1
+        {
+            margin:7vmin;
+            margin:50px;
+        }
+        .explore-content .ctn{
+            margin-top:40px;
+        }
+        .explore-content p{
+            color:whitesmoke;
+
+        }
+        .events.row{
+            margin-top:50px;
+        }
+        h4{
+            font-size: 3vmin;
+            margin:20px auto;
+        }
+        p{
+            padding:0px 40px;
+        }
+      .events .ctn{
+        margin-top:30px;
+      }
+        /*MOBILE DEVICE*/
+        @media only screen and (max-width:850px) 
+        {
+            .menu-btn
+            {
+                display:block;
+            }
+            .navbar
+            {
+                padding:0px;
+            }
+            .logo
+            {
+                position:absolute;
+                top:30px;
+                left:30px;
+            }
+            .nav-link
+             {
+                flex-direction: column;
+                width:100%;
+                height:100vh;
+                justify-content: center;
+                background:  rgb(86, 113, 86);
+                margin-right:-999px;
+                transition:all 0.5s ease;
+             }
+             .mobile-menu
+             {
+                margin-right:0px;
+                border-radius:300px;
+             }
+             .nav-link li{
+                margin:30px auto;
+             }
+          .row{
+            flex-direction: column;
+          } 
+          .col img{
+            max-width: 90%;
+          }
+         .row .col{
+            margin:20px auto;
+         }
+            .explore-content
+        {
+            width:100%;
+        }
+        .tours.col{
+            width:100%;
+        }
+        .img-gallery
+        {
+            justify-content: center;
+            align-items: center;
+        }
+        .img-gallery img
+       {
+        width:90%;
+       }
+    }
+        .tours .row.col{
+            width :50%;
+        }
+        .tours .img-gallery
+        {
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .img-gallery img{
+            width:250px;
+            margin:10px;
+
+        }
+        img{
+            transition:transform .3s ease;
+        }
+        img:hover{
+            transform: scale(1.3);
+        }
+        .ctn:hover{
+            background-color:aquamarine;
+            color:black
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 clas="Logo">Adventure</h1>
+        <ul class="nav-link">
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#">TOURS</a></li>
+            <li><a href="#">EXPLORE</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li class="ctn"><a href="#" >CONTACT</a></li>
+        </ul>
+        <img src="./imgs/menu.jpg" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-container"><h2>Explore The Colorful World</h2>
+        <div class="line"></div>
+        <h1>A Wonderful Gift</h1>
+        <a href="#" class="ctn">Learn More</a>
+        </div>
+    </header>
+    <section class="events">
+        <div class="title">
+            <h1>Upcomming Events</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./imgs/travell7.jpg">
+                <h4>Everest camp trek</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo suscipit itaque tempora eaque rem laborum aperiam cum deleniti, voluptates iure ipsa ratione dolore iusto assumenda nostrum velit harum quis necessitatibus?</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col">
+                <img src="./imgs/travell8.jpg">
+                <h4>Light House</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo suscipit itaque tempora eaque rem laborum aperiam cum deleniti, voluptates iure ipsa ratione dolore iusto assumenda nostrum velit harum quis necessitatibus?</p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+      <div class="explore-content">  
+        <h1>Explore The world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis excepturi quod fugit, quibusdam eos error vitae suscipit assumenda eum praesentium temporibus fuga velit distinctio minima. Cum perferendis quo minus sequi.
+        </p>
+        <a href="#" class="ctn">Learn More</a></div>
+</section>
+<section class="tours">
+    <div class="row">
+        <div class="col">
+            <h1>Upcomming Tours</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum tenetur natus, voluptatem quas omnis animi vitae architecto? Amet, vero. Libero quae neque facilis molestias consequatur eveniet quod totam optio ex.
+    
+            </p>
+            <a href="#" class="ctn">Explore More</a>
+        </div>
+        <div class="col">
+            <div class="img-galary">
+                <img src="./imgs/traveel3.jpg">
+                <img src="./imgs/travell1.jpg">
+                <img src="./imgs/travell4.jpg">
+                <img src="./imgs/travell5.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+</body>
+<script>
+    const menubtn=document.querySelector(".menu-btn");
+    const navlinks=document.querySelector(".nav-link");
+    menubtn.addEventListener("click",()=>{
+        navlinks.classList.toggle("mobile-menu");
+    })
+   </script> 
+</html>
